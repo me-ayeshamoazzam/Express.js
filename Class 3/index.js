@@ -14,6 +14,8 @@ app.get("/api/users", (req, res) => {
     res.json(users);
 });
 
+// Get method
+
 app.get("/api/users/:id", (req, res) => {
     const id = Number(req.params.id);
     const user = users.find((user) => user.id === id);
@@ -26,6 +28,8 @@ app.get("/api/users/:id", (req, res) => {
 
     res.json(user);
 });
+
+// Post method
 
 app.post("/api/users", (req, res) => {
     const newUser = {
@@ -44,6 +48,7 @@ app.post("/api/users", (req, res) => {
     
 });
 
+// Put method
 
 app.put("/api/users/:id", (req, res) => {
     const id = Number(req.params.id);
@@ -65,6 +70,7 @@ app.put("/api/users/:id", (req, res) => {
     });
 });
 
+// Delete method
 app.delete("/api/users/:id", (req, res) => {
     const id = Number(req.params.id);
 
