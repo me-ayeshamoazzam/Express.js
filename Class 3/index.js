@@ -70,25 +70,33 @@ app.put("/api/users/:id", (req, res) => {
     });
 });
 
-// Delete method
+
 app.delete("/api/users/:id", (req, res) => {
     const id = Number(req.params.id);
 
     const userIndex = users.findIndex((user) => user.id === id);
 
-    if (userIndex === -1) {
+    if (userIndex === -1) { // findIndex() returns -1 when it can't find anything.This is the same as: 
+
+// if (userIndex === -1) {
+//         return res.status(404).json({
+//             error: "User not found"
+//         });
+//     }
+
         return res.status(404).json({
             error: "User not found"
         });
     }
 
-    const deletedUser = users.splice(userIndex, 1);
+    const deletedUser = users.splice(userIndex, 1); // because The splice() syntax is: array.splice(start, deleteCount)
 
     res.json({
-        message: "User deleted",
+        message: "User Deleted",
         user: deletedUser[0]
     });
 });
+
 
 
 app.listen(port, () => {
