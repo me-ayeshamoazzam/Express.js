@@ -93,7 +93,6 @@ app.delete("/api/users/:id", (req, res) => {
 
     res.json({
         message: "User Deleted",
-        user: deletedUser[0]
     });
 });
 

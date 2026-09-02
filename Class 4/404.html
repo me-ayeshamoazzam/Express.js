@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Bean & Brew</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #fcfbfa; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #2c221e; color: #fff; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        nav a { color: #d4a373; text-decoration: none; margin-left: 1.5rem; font-weight: 600; }
+        nav a:hover { color: #fff; }
+        .error-container { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+        .error-code { font-size: 6rem; font-weight: bold; color: #bc6c25; margin: 0; }
+        h2 { color: #2c221e; margin-top: 0.5rem; }
+        p { color: #666; max-width: 400px; margin-bottom: 2rem; }
+        .btn { background-color: #2c221e; color: white; padding: 0.75rem 1.5rem; text-decoration: none; font-weight: bold; border-radius: 4px; }
+        .btn:hover { background-color: #bc6c25; }
+        footer { background-color: #2c221e; color: #888; text-align: center; padding: 1.5rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bean & Brew</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="error-container">
+        <p class="error-code">404</p>
+        <h2>Page Spilled Over</h2>
+        <p>The page you are looking for doesn't exist or has been moved to a different roaster.</p>
+        <a href="/" class="btn">Return Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bean & Brew Coffee Co. All rights reserved.</p>
+    </footer>
+</body>
+</html>

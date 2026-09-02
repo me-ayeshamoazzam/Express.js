@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew | Artisan Coffee House</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #fcfbfa; color: #333; }
+        header { background-color: #2c221e; color: #fff; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 1.5rem; letter-spacing: 1px; }
+        nav a { color: #d4a373; text-decoration: none; margin-left: 1.5rem; font-weight: 600; }
+        nav a:hover { color: #fff; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80') center/cover; color: white; text-align: center; padding: 6rem 2rem; }
+        .hero h2 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto; }
+        .btn { background-color: #d4a373; color: #2c221e; padding: 0.75rem 1.5rem; text-decoration: none; font-weight: bold; border-radius: 4px; }
+        .btn:hover { background-color: #faedcd; }
+        .content { max-width: 800px; margin: 3rem auto; padding: 0 1rem; text-align: center; }
+        .content h3 { color: #2c221e; font-size: 2rem; }
+        .content p { line-height: 1.7; color: #555; font-size: 1.05rem; }
+        
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; max-width: 1000px; margin: 4rem auto; padding: 0 1rem; }
+        .feature-card { background: white; padding: 2rem; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid #bc6c25; }
+        .feature-card h4 { margin-top: 0; color: #2c221e; font-size: 1.25rem; }
+        .feature-card p { color: #555; line-height: 1.6; font-size: 0.95rem; margin-bottom: 0; }
+        
+        .highlights { background-color: #f4eee9; padding: 4rem 1rem; text-align: center; margin-top: 3rem; }
+        .highlights h3 { color: #2c221e; font-size: 1.8rem; margin-bottom: 1rem; }
+        .highlights p { max-width: 700px; margin: 0 auto 1.5rem auto; color: #555; line-height: 1.7; }
+        
+        footer { background-color: #2c221e; color: #888; text-align: center; padding: 1.5rem; margin-top: 3rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bean & Brew</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Crafted with Passion, Served with Care</h2>
+        <p>Discover single-origin coffees, hand-crafted espresso drinks, and fresh pastries baked daily in the heart of downtown.</p>
+        <a href="/services" class="btn">Explore Our Services</a>
+    </section>
+
+    <section class="content">
+        <h3>Welcome to Your Daily Ritual</h3>
+        <p>At Bean & Brew, we believe that great coffee starts long before it reaches your cup. We partner directly with sustainable farmers across South America and Africa to bring you ethically sourced, masterfully roasted micro-lots that highlight the unique characteristics of every harvest.</p>
+    </section>
+
+    <div class="features">
+        <div class="feature-card">
+            <h4>Direct Trade Beans</h4>
+            <p>We work hand-in-hand with independent growers, ensuring fair compensation and total transparency from crop to counter.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Precision Extraction</h4>
+            <p>Every espresso shot is weighed, timed, and calibrated hourly to guarantee a balanced, flawless flavor profile every time.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Artisan Bakery</h4>
+            <p>Our display case features buttery croissants, sourdough loaves, and seasonal pastries baked fresh every morning by local pastry chefs.</p>
+        </div>
+    </div>
+
+    <section class="highlights">
+        <h3>More Than Just a Coffee Shop</h3>
+        <p>Whether you need a quiet corner to focus on remote work, a welcoming space to catch up with old friends, or expert guidance on setting up your home brew bar, our doors are open. Come grab a seat and make yourself at home.</p>
+        <a href="/contact" class="btn" style="background-color: #2c221e; color: #d4a373;">Get in Touch</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bean & Brew Coffee Co. All rights reserved.</p>
+    </footer>
+</body>
+</html>
