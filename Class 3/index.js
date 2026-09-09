@@ -45,7 +45,13 @@ app.post("/api/users", (req, res) => {
         message: "User Created",
         user: newUser
     });
-    
+
+    if (!req.body.first_name || !req.body.last_name || !req.body.email) {
+    return res.status(400).json({
+        error: "first_name, last_name and email are required"
+    });
+}
+
 });
 
 // Put method
@@ -76,23 +82,19 @@ app.delete("/api/users/:id", (req, res) => {
 
     const userIndex = users.findIndex((user) => user.id === id);
 
-    if (userIndex === -1) { // findIndex() returns -1 when it can't find anything.This is the same as: 
-
-// if (userIndex === -1) {
-//         return res.status(404).json({
-//             error: "User not found"
-//         });
-//     }
+    if (userIndex === -1) { 
 
         return res.status(404).json({
             error: "User not found"
         });
     }
 
-    const deletedUser = users.splice(userIndex, 1); // because The splice() syntax is: array.splice(start, deleteCount)
+    const deletedUser = users.splice(userIndex, 1); 
+    // because The splice() syntax is: array.splice(start, deleteCount)
 
     res.json({
         message: "User Deleted",
+        user: deletedUser[0]
     });
 });
 
