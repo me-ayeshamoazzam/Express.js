@@ -1,7 +1,8 @@
 const User = require("../model/userModel")
 
 // GET ALL USERS
-const getUsers = async (req, res) => {
+const getUsers = async (req, res) => { 
+    // async is used because we're going to wait for MongoDB to give us the data.
     try {
         const users = await User.find()
 
@@ -48,7 +49,7 @@ const getUserById = async (req, res) => {
 const createUser = async (req,res) => {
     try {
         const { name , email, age } = req.body;
-        const user = await User.create({
+        const user = await User.create({ // User.create() uses the schema from userModel.js
             name,
             email,
             age
@@ -64,4 +65,9 @@ const createUser = async (req,res) => {
             message: error.message
         })
     }
+}
+module.exports = {
+    createUser,
+    getUsers,
+    getUserById,
 }

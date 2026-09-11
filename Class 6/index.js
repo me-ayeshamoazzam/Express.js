@@ -5,7 +5,8 @@ require("dotenv").config()
 app.use(express.json())
 
 // Routes:
-
+const userRoutes = require("./routes/userRoute")
+app.use("/api", userRoutes)
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
 

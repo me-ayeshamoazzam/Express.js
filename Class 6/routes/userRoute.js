@@ -3,7 +3,7 @@ const router = express.Router()
 
 const {
     createUser,
-    updateUser,
+    // updateUser,
     getUsers,
     getUserById,
 } = require("../controller/userController")
@@ -18,6 +18,6 @@ router.get("/users", getUsers)
 router.get("/users/:id", getUserById)
 
 // UPDATE
-router.put("/users/:id" , updateUser)
+// router.put("/users/:id" , updateUser)
 
-module.exports = express.Router
+module.exports = router
